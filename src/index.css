@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Grotesk", ui-monospace, SFMono-Regular, monospace;
+
+  --color-obsidian: #0e0e0e;
+  --color-obsidian-low: #131313;
+  --color-obsidian-mid: #191a1a;
+  --color-obsidian-high: #1f2020;
+  --color-obsidian-highest: #252626;
+
+  --color-flora: #88ef77;
+  --color-flora-dark: #51b546;
+  --color-flora-deep: #006306;
+
+  --color-earth: #fdbf95;
+  --color-earth-dark: #663d1d;
+  --color-earth-deep: #3d210a;
+
+  --color-atmosphere: #63b0ff;
+  --color-atmosphere-dark: #42a2fb;
+  --color-atmosphere-deep: #003b67;
+
+  --color-magma: #ff7351;
+  --color-magma-dark: #b92902;
+  --color-magma-deep: #450900;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-white font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase tracking-tighter;
+  }
+}
+
+.voxel-brutal-btn {
+  @apply relative transition-all duration-75 active:translate-y-[2px];
+}
+
+.voxel-border-b {
+  @apply border-b-4 border-obsidian-low;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.pixel-grid {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
